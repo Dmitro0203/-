@@ -1,0 +1,78 @@
+﻿/* --- Загальні стилі сторінки --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #444;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* --- Стилізація таблиці --- */
+
+/* 1. Обгортка для тіні, заокруглення та адаптивності */
+.table-wrapper {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Ховає все, що виходить за межі заокруглених кутів */
+    overflow-x: auto; /* Додає горизонтальну прокрутку на малих екранах */
+}
+
+table {
+    width: 100%; /* Таблиця займає всю ширину обгортки */
+    border-collapse: collapse; /* 2. Найважливіша властивість: об'єднує рамки */
+    background-color: #fff;
+}
+
+/* 3. Стиль для заголовка таблиці */
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #34495e;
+    color: white;
+    caption-side: top; /* Розміщення заголовка зверху */
+}
+
+/* 4. Спільні стилі для всіх комірок */
+th, td {
+    padding: 12px 15px; /* Внутрішні відступи для простору */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Лінії між рядками */
+}
+
+/* 5. Унікальні стилі для заголовків (th) */
+thead th {
+    background-color: #3498db; /* Синій фон */
+    color: white;
+    text-transform: uppercase; /* Великі літери */
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+/* 6. "Зебра": чергування кольору фону для рядків tbody */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* 7. Ефект при наведенні курсора на рядок */
+tbody tr:hover {
+    background-color: #e2f1fb;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Стилізація першого стовпця */
+td:first-child, th:first-child {
+    text-align: center;
+    width: 50px;
+}
